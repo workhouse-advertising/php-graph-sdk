@@ -26,7 +26,7 @@ namespace Facebook\Tests\Http;
 use Facebook\Http\RequestBodyMultipart;
 use Facebook\FileUpload\FacebookFile;
 
-class RequestBodyMultipartTest extends \PHPUnit\Framework\TestCase
+class RequestBodyMultipartTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     public function testCanProperlyEncodeAnArrayOfParams()
     {

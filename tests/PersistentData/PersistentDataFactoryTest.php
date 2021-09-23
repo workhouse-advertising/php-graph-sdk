@@ -27,7 +27,7 @@ use Facebook\PersistentData\FacebookMemoryPersistentDataHandler;
 use Facebook\PersistentData\FacebookSessionPersistentDataHandler;
 use Facebook\PersistentData\PersistentDataFactory;
 
-class PersistentDataFactoryTest extends \PHPUnit\Framework\TestCase
+class PersistentDataFactoryTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     const COMMON_NAMESPACE = 'Facebook\PersistentData\\';
     const COMMON_INTERFACE = 'Facebook\PersistentData\PersistentDataInterface';

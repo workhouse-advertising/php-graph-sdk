@@ -25,7 +25,7 @@ namespace Facebook\Tests\PseudoRandomString;
 
 use Facebook\Tests\Fixtures\MyFooBarPseudoRandomStringGenerator;
 
-class PseudoRandomStringGeneratorTraitTest extends \PHPUnit\Framework\TestCase
+class PseudoRandomStringGeneratorTraitTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     public function testAnInvalidLengthWillThrow()
     {

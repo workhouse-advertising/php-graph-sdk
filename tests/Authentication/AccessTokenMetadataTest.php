@@ -25,7 +25,7 @@ namespace Facebook\Tests\Authentication;
 
 use Facebook\Authentication\AccessTokenMetadata;
 
-class AccessTokenMetadataTest extends \PHPUnit\Framework\TestCase
+class AccessTokenMetadataTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
 
     protected $graphResponseData = [

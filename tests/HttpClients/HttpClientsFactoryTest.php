@@ -29,7 +29,7 @@ use Facebook\HttpClients\FacebookStreamHttpClient;
 use Facebook\HttpClients\HttpClientsFactory;
 use GuzzleHttp\Client;
 
-class HttpClientsFactoryTest extends \PHPUnit\Framework\TestCase
+class HttpClientsFactoryTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     const COMMON_NAMESPACE = 'Facebook\HttpClients\\';
     const COMMON_INTERFACE = 'Facebook\HttpClients\FacebookHttpClientInterface';

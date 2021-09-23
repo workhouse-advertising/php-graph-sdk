@@ -29,7 +29,7 @@ use Facebook\FacebookRequest;
 use Facebook\FileUpload\FacebookFile;
 use Facebook\FileUpload\FacebookVideo;
 
-class FacebookRequestTest extends \PHPUnit\Framework\TestCase
+class FacebookRequestTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     public function testAnEmptyRequestEntityCanInstantiate()
     {

@@ -26,7 +26,7 @@ namespace Facebook\Tests;
 use Facebook\FacebookApp;
 use Facebook\SignedRequest;
 
-class SignedRequestTest extends \PHPUnit\Framework\TestCase
+class SignedRequestTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var FacebookApp

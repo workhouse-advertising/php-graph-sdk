@@ -29,7 +29,7 @@ use Facebook\FacebookResponse;
 use Facebook\FacebookBatchRequest;
 use Facebook\FacebookBatchResponse;
 
-class FacebookBatchResponseTest extends \PHPUnit\Framework\TestCase
+class FacebookBatchResponseTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var \Facebook\FacebookApp

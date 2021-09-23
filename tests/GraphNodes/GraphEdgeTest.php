@@ -28,7 +28,7 @@ use Facebook\FacebookRequest;
 use Facebook\GraphNodes\GraphEdge;
 use Facebook\GraphNodes\GraphNode;
 
-class GraphEdgeTest extends \PHPUnit\Framework\TestCase
+class GraphEdgeTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
 
     /**

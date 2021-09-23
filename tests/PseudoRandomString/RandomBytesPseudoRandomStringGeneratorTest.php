@@ -25,7 +25,7 @@ namespace Facebook\Tests\PseudoRandomString;
 
 use Facebook\PseudoRandomString\RandomBytesPseudoRandomStringGenerator;
 
-class RandomBytesPseudoRandomStringGeneratorTest extends \PHPUnit\Framework\TestCase
+class RandomBytesPseudoRandomStringGeneratorTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     public function testCanGenerateRandomStringOfArbitraryLength()
     {

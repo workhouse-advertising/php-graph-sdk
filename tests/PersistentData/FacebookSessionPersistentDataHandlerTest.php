@@ -25,7 +25,7 @@ namespace Facebook\Tests\PersistentData;
 
 use Facebook\PersistentData\FacebookSessionPersistentDataHandler;
 
-class FacebookSessionPersistentDataHandlerTest extends \PHPUnit\Framework\TestCase
+class FacebookSessionPersistentDataHandlerTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     public function testInactiveSessionsWillThrow()
     {

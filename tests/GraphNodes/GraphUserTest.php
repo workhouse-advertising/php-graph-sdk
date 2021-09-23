@@ -27,7 +27,7 @@ use Facebook\FacebookResponse;
 use Mockery as m;
 use Facebook\GraphNodes\GraphNodeFactory;
 
-class GraphUserTest extends \PHPUnit\Framework\TestCase
+class GraphUserTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var FacebookResponse

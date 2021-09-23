@@ -25,7 +25,7 @@ namespace Facebook\Tests\FileUpload;
 
 use Facebook\FileUpload\FacebookFile;
 
-class FacebookFileTest extends \PHPUnit\Framework\TestCase
+class FacebookFileTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     protected $testFile = '';
 

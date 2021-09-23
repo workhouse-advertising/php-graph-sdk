@@ -31,7 +31,7 @@ use Facebook\FileUpload\FacebookResumableUploader;
 use Facebook\FileUpload\FacebookTransferChunk;
 use Facebook\Tests\Fixtures\FakeGraphApiForResumableUpload;
 
-class FacebookResumableUploaderTest extends \PHPUnit\Framework\TestCase
+class FacebookResumableUploaderTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var FacebookApp

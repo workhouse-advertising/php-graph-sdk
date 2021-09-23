@@ -31,7 +31,7 @@ use Facebook\FacebookResponse;
 /**
  * @todo v6: Remove this test
  */
-class GraphObjectFactoryTest extends \PHPUnit\Framework\TestCase
+class GraphObjectFactoryTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var \Facebook\FacebookRequest

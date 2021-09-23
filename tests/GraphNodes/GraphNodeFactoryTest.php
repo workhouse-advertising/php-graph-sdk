@@ -28,7 +28,7 @@ use Facebook\FacebookRequest;
 use Facebook\FacebookResponse;
 use Facebook\GraphNodes\GraphNodeFactory;
 
-class GraphNodeFactoryTest extends \PHPUnit\Framework\TestCase
+class GraphNodeFactoryTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var \Facebook\FacebookRequest

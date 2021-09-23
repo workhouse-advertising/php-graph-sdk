@@ -27,7 +27,7 @@ use Facebook\FacebookApp;
 use Facebook\Tests\Fixtures\FooSignedRequestHelper;
 use Facebook\Tests\Fixtures\FooSignedRequestHelperFacebookClient;
 
-class FacebookSignedRequestFromInputHelperTest extends \PHPUnit\Framework\TestCase
+class FacebookSignedRequestFromInputHelperTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var FooSignedRequestHelper

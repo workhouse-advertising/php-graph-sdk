@@ -27,7 +27,7 @@ use Facebook\FacebookApp;
 use Facebook\FacebookRequest;
 use Facebook\FacebookResponse;
 
-class FacebookResponseTest extends \PHPUnit\Framework\TestCase
+class FacebookResponseTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var \Facebook\FacebookRequest

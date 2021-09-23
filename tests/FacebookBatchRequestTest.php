@@ -29,7 +29,7 @@ use Facebook\FacebookRequest;
 use Facebook\FacebookBatchRequest;
 use Facebook\FileUpload\FacebookFile;
 
-class FacebookBatchRequestTest extends \PHPUnit\Framework\TestCase
+class FacebookBatchRequestTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var FacebookApp

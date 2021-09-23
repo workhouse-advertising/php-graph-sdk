@@ -25,7 +25,7 @@ namespace Facebook\Tests\GraphNodes;
 
 use Facebook\GraphNodes\Collection;
 
-class CollectionTest extends \PHPUnit\Framework\TestCase
+class CollectionTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
 
     public function testAnExistingPropertyCanBeAccessed()

@@ -25,7 +25,7 @@ namespace Facebook\Tests\PseudoRandomString;
 
 use Facebook\PseudoRandomString\PseudoRandomStringGeneratorFactory;
 
-class PseudoRandomStringFactoryTest extends \PHPUnit\Framework\TestCase
+class PseudoRandomStringFactoryTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     const COMMON_NAMESPACE = 'Facebook\PseudoRandomString\\';
     const COMMON_INTERFACE = 'Facebook\PseudoRandomString\PseudoRandomStringGeneratorInterface';

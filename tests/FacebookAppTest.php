@@ -25,7 +25,7 @@ namespace Facebook\Tests;
 
 use Facebook\FacebookApp;
 
-class FacebookAppTest extends \PHPUnit\Framework\TestCase
+class FacebookAppTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var FacebookApp

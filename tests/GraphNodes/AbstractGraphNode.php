@@ -26,7 +26,7 @@ namespace Facebook\Tests\GraphNodes;
 use Mockery as m;
 use Facebook\GraphNodes\GraphNodeFactory;
 
-abstract class AbstractGraphNode extends \PHPUnit\Framework\TestCase
+abstract class AbstractGraphNode extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     /**
      * @var \Facebook\FacebookResponse|\Mockery\MockInterface

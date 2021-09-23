@@ -25,7 +25,7 @@ namespace Facebook\Tests\Url;
 
 use Facebook\Url\FacebookUrlDetectionHandler;
 
-class FacebookUrlDetectionHandlerTest extends \PHPUnit\Framework\TestCase
+class FacebookUrlDetectionHandlerTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     public function testProperlyGeneratesUrlFromCommonScenario()
     {

@@ -34,7 +34,7 @@ use Facebook\Tests\Fixtures\FooClientInterface;
 use Facebook\Tests\Fixtures\FooPersistentDataInterface;
 use Facebook\Tests\Fixtures\FooUrlDetectionInterface;
 
-class FacebookTest extends \PHPUnit\Framework\TestCase
+class FacebookTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 {
     protected $config = [
         'app_id' => '1337',
@@ -134,11 +134,7 @@ class FacebookTest extends \PHPUnit\Framework\TestCase
 
     public function testSettingAnInvalidUrlHandlerThrows()
     {
-        $expectedException = (PHP_MAJOR_VERSION > 5 && class_exists('TypeError'))
-            ? 'TypeError'
-            : 'PHPUnit_Framework_Error';
-
-        $this->setExpectedException($expectedException);
+        $this->expectException(\TypeError::class);
 
         $config = array_merge($this->config, [
             'url_detection_handler' => 'foo_handler',
