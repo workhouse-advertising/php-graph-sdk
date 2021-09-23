@@ -25,7 +25,7 @@ namespace Facebook\Tests\PersistentData;
 
 use Facebook\PersistentData\FacebookSessionPersistentDataHandler;
 
-class FacebookSessionPersistentDataHandlerTest extends \PHPUnit_Framework_TestCase
+class FacebookSessionPersistentDataHandlerTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @expectedException \Facebook\Exceptions\FacebookSDKException

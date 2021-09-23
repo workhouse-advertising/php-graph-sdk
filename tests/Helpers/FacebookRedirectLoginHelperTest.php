@@ -31,7 +31,7 @@ use Facebook\PersistentData\FacebookMemoryPersistentDataHandler;
 use Facebook\Tests\Fixtures\FooPseudoRandomStringGenerator;
 use Facebook\Tests\Fixtures\FooRedirectLoginOAuth2Client;
 
-class FacebookRedirectLoginHelperTest extends \PHPUnit_Framework_TestCase
+class FacebookRedirectLoginHelperTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var FacebookMemoryPersistentDataHandler
@@ -49,7 +49,7 @@ class FacebookRedirectLoginHelperTest extends \PHPUnit_Framework_TestCase
     const FOO_STATE = "foo_state";
     const FOO_PARAM = "some_param=blah";
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->persistentDataHandler = new FacebookMemoryPersistentDataHandler();
 

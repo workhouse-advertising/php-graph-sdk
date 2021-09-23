@@ -34,7 +34,7 @@ use Facebook\Tests\Fixtures\FooClientInterface;
 use Facebook\Tests\Fixtures\FooPersistentDataInterface;
 use Facebook\Tests\Fixtures\FooUrlDetectionInterface;
 
-class FacebookTest extends \PHPUnit_Framework_TestCase
+class FacebookTest extends \PHPUnit\Framework\TestCase
 {
     protected $config = [
         'app_id' => '1337',

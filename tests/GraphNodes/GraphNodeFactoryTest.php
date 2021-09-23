@@ -28,14 +28,14 @@ use Facebook\FacebookRequest;
 use Facebook\FacebookResponse;
 use Facebook\GraphNodes\GraphNodeFactory;
 
-class GraphNodeFactoryTest extends \PHPUnit_Framework_TestCase
+class GraphNodeFactoryTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var \Facebook\FacebookRequest
      */
     protected $request;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $app = new FacebookApp('123', 'foo_app_secret');
         $this->request = new FacebookRequest(

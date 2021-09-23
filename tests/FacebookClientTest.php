@@ -38,7 +38,7 @@ use Facebook\HttpClients\FacebookStreamHttpClient;
 use Facebook\Tests\Fixtures\MyFooBatchClientHandler;
 use Facebook\Tests\Fixtures\MyFooClientHandler;
 
-class FacebookClientTest extends \PHPUnit_Framework_TestCase
+class FacebookClientTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var FacebookApp
@@ -60,7 +60,7 @@ class FacebookClientTest extends \PHPUnit_Framework_TestCase
      */
     public static $testFacebookClient;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->fbApp = new FacebookApp('id', 'shhhh!');
         $this->fbClient = new FacebookClient(new MyFooClientHandler());

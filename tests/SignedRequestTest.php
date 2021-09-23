@@ -26,7 +26,7 @@ namespace Facebook\Tests;
 use Facebook\FacebookApp;
 use Facebook\SignedRequest;
 
-class SignedRequestTest extends \PHPUnit_Framework_TestCase
+class SignedRequestTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var FacebookApp
@@ -46,7 +46,7 @@ class SignedRequestTest extends \PHPUnit_Framework_TestCase
         'foo' => 'bar',
     ];
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->app = new FacebookApp('123', 'foo_app_secret');
     }

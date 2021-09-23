@@ -29,14 +29,14 @@ use Facebook\FacebookRequest;
 use Facebook\FacebookBatchRequest;
 use Facebook\FileUpload\FacebookFile;
 
-class FacebookBatchRequestTest extends \PHPUnit_Framework_TestCase
+class FacebookBatchRequestTest extends \PHPUnit\Framework\TestCase
 {
     /**
      * @var FacebookApp
      */
     private $app;
 
-    protected function setUp()
+    protected function setUp(): void
     {
         $this->app = new FacebookApp('123', 'foo_secret');
     }
