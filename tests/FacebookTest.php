@@ -41,11 +41,9 @@ class FacebookTest extends \PHPUnit\Framework\TestCase
         'app_secret' => 'foo_secret',
     ];
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testInstantiatingWithoutAppIdThrows()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         // unset value so there is no fallback to test expected Exception
         putenv(Facebook::APP_ID_ENV_NAME.'=');
         $config = [
@@ -54,11 +52,9 @@ class FacebookTest extends \PHPUnit\Framework\TestCase
         new Facebook($config);
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testInstantiatingWithoutAppSecretThrows()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         // unset value so there is no fallback to test expected Exception
         putenv(Facebook::APP_SECRET_ENV_NAME.'=');
         $config = [
@@ -67,11 +63,9 @@ class FacebookTest extends \PHPUnit\Framework\TestCase
         new Facebook($config);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSettingAnInvalidHttpClientHandlerThrows()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $config = array_merge($this->config, [
             'http_client_handler' => 'foo_handler',
         ]);
@@ -117,11 +111,9 @@ class FacebookTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSettingAnInvalidPersistentDataHandlerThrows()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $config = array_merge($this->config, [
             'persistent_data_handler' => 'foo_handler',
         ]);
@@ -180,11 +172,9 @@ class FacebookTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('bar_token', (string)$accessToken);
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSettingAnInvalidPseudoRandomStringGeneratorThrows()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $config = array_merge($this->config, [
             'pseudo_random_string_generator' => 'foo_generator',
         ]);
@@ -273,11 +263,9 @@ class FacebookTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testSettingAnAccessThatIsNotStringOrAccessTokenThrows()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $config = array_merge($this->config, [
             'default_access_token' => 123,
         ]);
@@ -402,11 +390,9 @@ class FacebookTest extends \PHPUnit\Framework\TestCase
         ], $response);
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookResponseException
-     */
     public function testMaxingOutRetriesWillThrow()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookResponseException::class);
         $client = new FakeGraphApiForResumableUpload();
         $client->failOnTransfer();
 

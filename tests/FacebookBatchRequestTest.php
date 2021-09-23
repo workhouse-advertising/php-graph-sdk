@@ -80,31 +80,25 @@ class FacebookBatchRequestTest extends \PHPUnit\Framework\TestCase
         $this->assertRequestContainsAppAndToken($request, $customApp, 'foo_token');
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testWillThrowWhenNoThereIsNoAppFallback()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         $batchRequest = new FacebookBatchRequest();
 
         $batchRequest->addFallbackDefaults(new FacebookRequest(null, 'foo_token'));
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testWillThrowWhenNoThereIsNoAccessTokenFallback()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         $request = new FacebookBatchRequest();
 
         $request->addFallbackDefaults(new FacebookRequest($this->app));
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testAnInvalidTypeGivenToAddWillThrow()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $request = new FacebookBatchRequest();
 
         $request->add('foo');
@@ -168,21 +162,17 @@ class FacebookBatchRequestTest extends \PHPUnit\Framework\TestCase
         $this->assertRequestsMatch($requests, $formattedRequests);
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testAZeroRequestCountWithThrow()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         $batchRequest = new FacebookBatchRequest($this->app, [], 'foo_token');
 
         $batchRequest->validateBatchRequestCount();
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testMoreThanFiftyRequestsWillThrow()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         $batchRequest = $this->createBatchRequest();
 
         $this->createAndAppendRequestsTo($batchRequest, 51);

@@ -27,20 +27,16 @@ use Facebook\Tests\Fixtures\MyFooBarPseudoRandomStringGenerator;
 
 class PseudoRandomStringGeneratorTraitTest extends \PHPUnit\Framework\TestCase
 {
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testAnInvalidLengthWillThrow()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $prsg = new MyFooBarPseudoRandomStringGenerator();
         $prsg->validateLength('foo_len');
     }
 
-    /**
-     * @expectedException \InvalidArgumentException
-     */
     public function testALengthThatIsNotAtLeastOneCharacterWillThrow()
     {
+        $this->expectException(\InvalidArgumentException::class);
         $prsg = new MyFooBarPseudoRandomStringGenerator();
         $prsg->validateLength(0);
     }

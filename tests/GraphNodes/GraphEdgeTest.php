@@ -55,11 +55,9 @@ class GraphEdgeTest extends \PHPUnit\Framework\TestCase
         );
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testNonGetRequestsWillThrow()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         $this->request->setMethod('POST');
         $graphEdge = new GraphEdge($this->request);
         $graphEdge->validateForPagination();

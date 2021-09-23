@@ -27,11 +27,9 @@ use Facebook\PersistentData\FacebookSessionPersistentDataHandler;
 
 class FacebookSessionPersistentDataHandlerTest extends \PHPUnit\Framework\TestCase
 {
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testInactiveSessionsWillThrow()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         new FacebookSessionPersistentDataHandler();
     }
 

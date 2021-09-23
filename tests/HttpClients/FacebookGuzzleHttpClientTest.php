@@ -97,11 +97,9 @@ class FacebookGuzzleHttpClientTest extends AbstractTestHttpClient
         $this->assertEquals(200, $response->getHttpResponseCode());
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testThrowsExceptionOnClientError()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         $request = new Request('GET', 'http://foo.com');
 
         $this->guzzleMock

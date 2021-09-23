@@ -50,11 +50,9 @@ class FacebookFileTest extends \PHPUnit\Framework\TestCase
         $this->assertEquals('is a text file', $fileContents);
     }
 
-    /**
-     * @expectedException \Facebook\Exceptions\FacebookSDKException
-     */
     public function testTryingToOpenAFileThatDoesntExistsThrows()
     {
+        $this->expectException(\Facebook\Exceptions\FacebookSDKException::class);
         new FacebookFile('does_not_exist.file');
     }
 }
