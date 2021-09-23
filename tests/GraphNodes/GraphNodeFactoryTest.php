@@ -51,6 +51,8 @@ class GraphNodeFactoryTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 
     public function testAValidGraphNodeResponseWillNotThrow()
     {
+        $this->expectNotToPerformAssertions();
+
         $data = '{"id":"123","name":"foo"}';
         $res = new FacebookResponse($this->request, $data);
 
@@ -70,6 +72,8 @@ class GraphNodeFactoryTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 
     public function testAValidGraphEdgeResponseWillNotThrow()
     {
+        $this->expectNotToPerformAssertions();
+
         $data = '{"data":[{"id":"123","name":"foo"},{"id":"1337","name":"bar"}]}';
         $res = new FacebookResponse($this->request, $data);
 
@@ -106,6 +110,8 @@ class GraphNodeFactoryTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 
     public function testValidSubClassesWillNotThrow()
     {
+        $this->expectNotToPerformAssertions();
+
         GraphNodeFactory::validateSubclass('\Facebook\GraphNodes\GraphNode');
         GraphNodeFactory::validateSubclass('\Facebook\GraphNodes\GraphAlbum');
         GraphNodeFactory::validateSubclass('\Facebook\Tests\Fixtures\MyFooGraphNode');

@@ -182,6 +182,8 @@ class FacebookBatchRequestTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 
     public function testLessOrEqualThanFiftyRequestsWillNotThrow()
     {
+        $this->expectNotToPerformAssertions();
+
         $batchRequest = $this->createBatchRequest();
 
         $this->createAndAppendRequestsTo($batchRequest, 50);

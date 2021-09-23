@@ -89,6 +89,8 @@ class AccessTokenMetadataTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 
     public function testAnExpectedAppIdWillNotThrow()
     {
+        $this->expectNotToPerformAssertions();
+
         $metadata = new AccessTokenMetadata($this->graphResponseData);
         $metadata->validateAppId('123');
     }
@@ -102,6 +104,8 @@ class AccessTokenMetadataTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 
     public function testAnExpectedUserIdWillNotThrow()
     {
+        $this->expectNotToPerformAssertions();
+
         $metadata = new AccessTokenMetadata($this->graphResponseData);
         $metadata->validateUserId('1337');
     }
@@ -115,6 +119,8 @@ class AccessTokenMetadataTest extends \Mockery\Adapter\Phpunit\MockeryTestCase
 
     public function testAnActiveAccessTokenWillNotThrow()
     {
+        $this->expectNotToPerformAssertions();
+
         $this->graphResponseData['data']['expires_at'] = time() + 1000;
         $metadata = new AccessTokenMetadata($this->graphResponseData);
         $metadata->validateExpiration();
